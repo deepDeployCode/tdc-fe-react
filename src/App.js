@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+import axios from "axios";
 import "./App.css";
 import { useEffect, useState } from "react";
 
@@ -19,9 +19,19 @@ function App() {
             {columns.map((c, i) => (
               <th key={i}>{c}</th>
             ))}
+            <th>Action</th>
           </tr>
         </thead>
-        <tbody></tbody>
+        <tbody>
+          {records.map((d, i) => (
+            <tr key={i}>
+              <td>{d.id}</td>
+              <td>{d.nama}</td>
+              <td>{d.nickname}</td>
+              <td>Update</td>
+            </tr>
+          ))}
+        </tbody>
       </table>
     </div>
   );
