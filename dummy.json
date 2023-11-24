@@ -1,0 +1,29 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "nama": "samsul",
+            "nickname": "samsul"
+        },
+        {
+            "id": 2,
+            "nama": "miftah",
+            "nickname": "miftah"
+        },
+        {
+            "id": 3,
+            "nama": "ando",
+            "nickname": "ando"
+        },
+        {
+            "id": 4,
+            "nama": "andi",
+            "nickname": "andi"
+        },
+        {
+            "id": 5,
+            "nama": "farhan",
+            "nickname": "farhan"
+        }
+    ]
+}
