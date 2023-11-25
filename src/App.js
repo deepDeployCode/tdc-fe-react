@@ -1,6 +1,7 @@
 import axios from "axios";
 import "./App.css";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function App() {
   const [columns, setColumns] = useState([]);
@@ -13,6 +14,11 @@ function App() {
   }, []);
   return (
     <div className="container mt-5">
+      <div className="text-end">
+        <Link to="/create" className="btn btn-primary">
+          Tambah Data
+        </Link>
+      </div>
       <table className="table">
         <thead>
           <tr>
