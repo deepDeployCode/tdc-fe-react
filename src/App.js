@@ -36,7 +36,17 @@ function App() {
               <td>{d.email}</td>
               <td>{d.created_at}</td>
               <td>{d.updated_at}</td>
-              <td>Update</td>
+              <td>
+                <Link
+                  to={`editdata/${d.id}`}
+                  className="btn btn-sm btn-success"
+                >
+                  Update
+                </Link>
+                <Link to="/deletedata" className="btn btn-sm ms-1 btn-danger">
+                  Delete
+                </Link>
+              </td>
             </tr>
           ))}
         </tbody>

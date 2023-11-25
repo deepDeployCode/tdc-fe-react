@@ -10,6 +10,9 @@ const methods = {
   listData() {
     return resource.get(`${endpoint.index.list}`);
   },
+  detailData(id) {
+    return resource.get(`${endpoint.index.list}/${id}`);
+  },
   storeData(data) {
     return resource.post(`${endpoint.index.list}`, data);
   },
