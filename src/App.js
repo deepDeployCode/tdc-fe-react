@@ -1,15 +1,15 @@
-import axios from "axios";
 import "./App.css";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import api from "../src/api/endpoints";
 
 function App() {
   const [columns, setColumns] = useState([]);
   const [records, setRecords] = useState([]);
   useEffect(() => {
-    axios.get("http://localhost:3030/users").then((res) => {
-      setColumns(Object.keys(res.data[0]));
-      setRecords(res.data);
+    api.listData().then((data) => {
+      setColumns(Object.keys(data.data[0]));
+      setRecords(data.data);
     });
   }, []);
   return (
