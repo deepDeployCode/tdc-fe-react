@@ -1,12 +1,11 @@
 import "./App.css";
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import api from "./api/endpoints";
 
 function App() {
   const [columns, setColumns] = useState([]);
   const [records, setRecords] = useState([]);
-  const RedirectTo = useNavigate();
   useEffect(() => {
     api.listData().then((data) => {
       setColumns(Object.keys(data.data[0]));
@@ -65,7 +64,7 @@ function App() {
         .deleteData(id)
         .then((res) => {
           alert("Data berhasil di hapus");
-          RedirectTo("/");
+          window.location.reload();
         })
         .catch((error) => console.log(error));
     }
