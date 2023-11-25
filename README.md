@@ -1,7 +1,7 @@
 # Getting Started with TDC React APP
 
 aplikasi ini dibuat menggunakan react js dengan versi node js: 18.17.1.\
-pastikan node js di local anda sesuai dengan versi. dari node js yang ditentukan\
+pastikan node js di local anda sesuai dengan versi. dari node js yang ditentukan.\
 
 ### `npm install`
 
