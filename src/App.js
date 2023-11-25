@@ -1,7 +1,7 @@
 import "./App.css";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import api from "../src/api/endpoints";
+import api from "./api/endpoints";
 
 function App() {
   const [columns, setColumns] = useState([]);
