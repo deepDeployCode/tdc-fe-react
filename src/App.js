@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="container mt-5">
       <div className="text-end">
-        <Link to="/create" className="btn btn-primary">
+        <Link to="/tambahdata" className="btn btn-primary">
           Tambah Data
         </Link>
       </div>
