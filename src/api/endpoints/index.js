@@ -2,7 +2,7 @@ import resource from "../resource";
 
 const endpoint = {
   index: {
-    list: "datas",
+    list: "/master-data/user",
   },
 };
 

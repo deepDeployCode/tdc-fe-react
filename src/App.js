@@ -32,8 +32,10 @@ function App() {
           {records.map((d, i) => (
             <tr key={i}>
               <td>{d.id}</td>
-              <td>{d.nama}</td>
-              <td>{d.nickname}</td>
+              <td>{d.name}</td>
+              <td>{d.email}</td>
+              <td>{d.created_at}</td>
+              <td>{d.updated_at}</td>
               <td>Update</td>
             </tr>
           ))}
