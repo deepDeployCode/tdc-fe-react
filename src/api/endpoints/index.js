@@ -11,13 +11,13 @@ const methods = {
     return resource.get(`${endpoint.index.list}`);
   },
   storeData(data) {
-    return resource.post(`${endpoint.index.list}`);
+    return resource.post(`${endpoint.index.list}`, data);
   },
   updateData(id, data) {
-    return resource.put(`${endpoint.index.list}`);
+    return resource.put(`${endpoint.index.list}/${id}`, data);
   },
-  deleteData(id, data) {
-    return resource.delete(`${endpoint.index.list}`);
+  deleteData(id) {
+    return resource.delete(`${endpoint.index.list}/${id}`);
   },
 };
 
