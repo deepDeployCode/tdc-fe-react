@@ -1,11 +1,12 @@
 import "./App.css";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import api from "./api/endpoints";
 
 function App() {
   const [columns, setColumns] = useState([]);
   const [records, setRecords] = useState([]);
+  const RedirectTo = useNavigate();
   useEffect(() => {
     api.listData().then((data) => {
       setColumns(Object.keys(data.data[0]));
@@ -43,9 +44,12 @@ function App() {
                 >
                   Update
                 </Link>
-                <Link to="/deletedata" className="btn btn-sm ms-1 btn-danger">
+                <button
+                  onClick={(e) => handlerDeleteData(d.id)}
+                  className="btn btn-sm ms-1 btn-danger"
+                >
                   Delete
-                </Link>
+                </button>
               </td>
             </tr>
           ))}
@@ -53,6 +57,19 @@ function App() {
       </table>
     </div>
   );
+
+  function handlerDeleteData(id) {
+    const conf = window.confirm("Apakah anda ingin mendelete data ini");
+    if (conf) {
+      api
+        .deleteData(id)
+        .then((res) => {
+          alert("Data berhasil di hapus");
+          RedirectTo("/");
+        })
+        .catch((error) => console.log(error));
+    }
+  }
 }
 
 export default App;
